@@ -1,0 +1,59 @@
+REM TITLE Disable Google
+REM AUTHOR Anjali Narang
+REM DESCRIPTION test to change the hosts file
+
+DELAY 500
+
+REM run dialog
+GUI r
+DELAY 500
+
+REM admin cmd prompt
+STRING cmd
+DELAY 500
+CTRL-SHIFT-ENTER
+DELAY 1000
+
+REM say yes to open
+ALT y
+DELAY 500
+
+REM go to directory with hosts file
+STRING cd C:\Windows\System32\drivers\etc
+ENTER
+DELAY 500
+
+REM redirect google to localhost to disable it
+STRING echo. >> hosts
+ENTER
+STRING echo 127.0.0.1 google.com >> hosts
+ENTER
+STRING echo 127.0.0.1 www.google.com >> hosts
+ENTER
+STRING echo 127.0.0.1 accounts.google.com >> hosts
+ENTER
+STRING echo 127.0.0.1 apis.google.com >> hosts
+ENTER
+STRING echo 127.0.0.1 ogads-pa.clients6.google.com >> hosts
+ENTER
+STRING echo ::1 google.com >> hosts
+ENTER
+STRING echo ::1 www.google.com >> hosts
+ENTER
+STRING echo ::1 accounts.google.com >> hosts
+ENTER
+STRING echo ::1 apis.google.com >> hosts
+ENTER
+STRING echo ::1 ogads-pa.clients6.google.com >> hosts
+ENTER
+DELAY 200
+
+REM close cmd prompt
+STRING exit
+ENTER
+
+REM to restore:
+REM Windows + R, notepad, ctrl+shift+enter
+REM file -> open -> C:\Windows\System32\drivers\etc
+REM change type to all files to see the hosts file
+REM delete up to the last comment (with the #)
