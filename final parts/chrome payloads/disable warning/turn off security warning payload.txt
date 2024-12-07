@@ -1,0 +1,37 @@
+REM TITLE turn off security warnings for Chrome
+REM AUTHOR Anjali Narang
+REM DESCRIPTION make it not warn when accessing my.monmouth.edu
+
+DELAY 500
+
+REM run dialog
+GUI r
+DELAY 500
+
+REM wait for Chrome to open
+STRING chrome
+ENTER
+DELAY 500
+
+REM go to site
+STRING https://my.monmouth.edu/
+ENTER
+DELAY 500
+
+REM press "Advanced"
+TAB
+TAB
+TAB
+TAB
+DELAY 200
+ENTER
+DELAY 200
+
+REM press "Proceed"
+TAB
+DELAY 200
+ENTER
+DELAY 200
+
+REM close Chrome
+ALT F4

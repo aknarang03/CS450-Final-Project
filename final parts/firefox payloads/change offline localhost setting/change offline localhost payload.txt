@@ -1,0 +1,47 @@
+REM TITLE Firefox offline localhost
+REM AUTHOR Anjali Narang
+REM DESCRIPTION enable the offline localhost setting
+
+DELAY 500
+
+REM run dialog
+GUI r
+DELAY 500
+
+REM wait for Firefox to open
+STRING firefox
+ENTER
+DELAY 500
+
+REM go to settings
+STRING about:config
+ENTER
+DELAY 1000
+
+REM focus and press "accept risk and continue"
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+DELAY 200
+ENTER
+
+REM go to the setting
+DELAY 500
+STRING network.dns.offline-localhost
+
+REM focus and press the switch button
+DELAY 200
+TAB
+TAB
+DELAY 200
+ENTER
+
+REM close Firefox
+ALT F4

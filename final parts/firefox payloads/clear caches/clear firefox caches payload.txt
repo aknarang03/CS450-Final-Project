@@ -1,0 +1,41 @@
+REM TITLE clear Firefox caches
+REM AUTHOR Anjali Narang
+REM DESCRIPTION clear HTTP and DNS caches
+
+DELAY 500
+
+REM run dialog
+GUI r
+DELAY 500
+
+REM wait for Firefox to open
+STRING firefox
+ENTER
+DELAY 500
+
+REM go to networking dns
+STRING about:networking#dns
+ENTER
+DELAY 1000
+
+REM focus clear cache button and press it
+TAB
+DELAY 200
+ENTER
+DELAY 500
+
+REM open new tab and go to networking http
+CTRL t
+DELAY 500
+STRING about:networking#http
+ENTER
+DELAY 500
+
+REM focus clear cache button and press it
+TAB
+DELAY 200
+ENTER
+DELAY 500
+
+REM close Firefox
+ALT F4

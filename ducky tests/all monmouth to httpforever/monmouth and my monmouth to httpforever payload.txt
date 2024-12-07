@@ -1,0 +1,47 @@
+REM TITLE monmouth and my monmouth to httpforever
+REM AUTHOR Anjali Narang
+REM DESCRIPTION test to direct away from monmouth.edu and my.monmouth.edu
+
+DELAY 500
+
+REM run dialog
+GUI r
+DELAY 500
+
+REM admin cmd prompt
+STRING cmd
+DELAY 500
+CTRL-SHIFT-ENTER
+DELAY 1000
+
+REM say yes to open
+ALT y
+DELAY 500
+
+REM go to directory with hosts file
+STRING cd C:\Windows\System32\drivers\etc
+ENTER
+DELAY 500
+
+REM redirect monmouth.edu and my.monmouth.edu to httpforever.com
+STRING echo. >> hosts
+ENTER
+STRING echo 2604:a880:4:1d0::1f1:2000 monmouth.edu >> hosts
+ENTER
+STRING echo 146.190.62.39 monmouth.edu >> hosts
+ENTER
+STRING echo 2604:a880:4:1d0::1f1:2000 my.monmouth.edu >> hosts
+ENTER
+STRING echo 146.190.62.39 my.monmouth.edu >> hosts
+ENTER
+DELAY 200
+
+REM close cmd prompt
+STRING exit
+ENTER
+
+REM to restore:
+REM Windows + R, notepad, ctrl+shift+enter
+REM file -> open -> C:\Windows\System32\drivers\etc
+REM change type to all files to see the hosts file
+REM delete up to the last comment (with the #)
