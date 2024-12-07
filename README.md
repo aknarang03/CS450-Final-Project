@@ -10,6 +10,10 @@ NOTE: Any files renamed from inject.bin to [something] inject.bin need to be ren
 
 final- contains the final product, as well as the payload to reverse it.
 
+final firefox only- only configures / reverses configurations for Firefox.
+
+final chrome only- only configures / reverses configurations for Chrome.
+
 final parts- payloads used in the final product.
 
 ducky tests- preliminary tests that were done with USB rubber ducky.
