@@ -46,6 +46,140 @@ REM run dialog
 GUI r
 DELAY 500
 
+REM wait for Firefox to open
+STRING firefox
+ENTER
+DELAY 500
+
+REM go to settings
+CTRL t
+DELAY 500
+STRING about:preferences
+ENTER
+DELAY 1000
+
+REM search for setting
+STRING cookies and site data
+
+REM focus the button
+DELAY 200
+TAB
+TAB
+TAB
+DELAY 200
+ENTER
+
+REM set to delete all history
+DELAY 200
+DOWN
+DOWN
+DOWN
+DOWN
+DOWN
+
+REM select history
+DELAY 200
+TAB
+
+REM delete
+DELAY 200
+ENTER
+
+DELAY 1000
+
+REM go to settings
+CTRL t
+DELAY 500
+STRING about:config
+ENTER
+DELAY 1000
+
+REM focus and press "accept risk and continue"
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+DELAY 200
+ENTER
+
+REM go to the setting
+DELAY 500
+STRING network.dns.offline-localhost
+
+REM focus and press the switch button
+DELAY 200
+TAB
+TAB
+DELAY 200
+ENTER
+
+DELAY 1000
+
+REM go to networking dns
+CTRL t
+DELAY 500
+STRING about:networking#dns
+ENTER
+DELAY 1000
+
+REM focus clear cache button and press it
+TAB
+DELAY 200
+ENTER
+DELAY 500
+
+REM open new tab and go to networking http
+CTRL t
+DELAY 500
+STRING about:networking#http
+ENTER
+DELAY 500
+
+REM focus clear cache button and press it
+TAB
+DELAY 200
+ENTER
+
+DELAY 1000
+
+REM go to site
+CTRL t
+DELAY 500
+STRING https://my.monmouth.edu/
+ENTER
+DELAY 1000
+
+REM press "Accept the risk and continue"
+TAB
+TAB
+TAB
+TAB
+TAB
+DELAY 1000
+ENTER
+DELAY 1000
+
+REM close Firefox
+CTRL w
+CTRL w
+CTRL w
+CTRL w 
+CTRL w
+CTRL w
+CTRL w
+
+DELAY 1000
+
+REM run dialog
+GUI r
+DELAY 500
+
 REM wait for Chrome to open
 STRING chrome
 ENTER
@@ -83,92 +217,6 @@ ENTER
 DELAY 200
 
 REM close Chrome
-ALT F4
-
-DELAY 500
-
-REM run dialog
-GUI r
-DELAY 500
-
-REM wait for Firefox to open
-STRING firefox
-ENTER
-DELAY 500
-
-REM go to settings
-CTRL t
-DELAY 500
-STRING about:config
-ENTER
-DELAY 1000
-
-REM focus and press "accept risk and continue"
-TAB
-TAB
-TAB
-TAB
-TAB
-TAB
-TAB
-TAB
-TAB
-TAB
-DELAY 200
-ENTER
-
-REM go to the setting
-DELAY 500
-STRING network.dns.offline-localhost
-
-REM focus and press the switch button
-DELAY 200
-TAB
-TAB
-DELAY 200
-ENTER
-
-REM close Firefox
-ALT F4
-
-DELAY 500
-
-REM run dialog
-GUI r
-DELAY 500
-
-REM wait for Firefox to open
-STRING firefox
-ENTER
-DELAY 500
-
-REM go to networking dns
-CTRL t
-DELAY 500
-STRING about:networking#dns
-ENTER
-DELAY 1000
-
-REM focus clear cache button and press it
-TAB
-DELAY 200
-ENTER
-DELAY 500
-
-REM open new tab and go to networking http
-CTRL t
-DELAY 500
-STRING about:networking#http
-ENTER
-DELAY 500
-
-REM focus clear cache button and press it
-TAB
-DELAY 200
-ENTER
-DELAY 500
-
-REM close Firefox
 ALT F4
 
 DELAY 500

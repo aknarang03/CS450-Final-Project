@@ -1,0 +1,8 @@
+VIDEO 1
+Shows the payload running in its entirety.
+
+VIDEO 2
+Proof that the sites that were opened are fake. The links on the bottom of the page go nowhere.
+
+VIDEO 3
+I had typed https://monmouth.edu in video 1 in Firefox. But I forgot to show that this is not necessary anymore because Firefox will automatically use https when its memory of the previous monmouth.edu is cleared, and once the fake site is visited once, which is done in the payload. 
