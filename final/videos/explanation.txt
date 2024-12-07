@@ -6,3 +6,6 @@ Proof that the sites that were opened are fake. The links on the bottom of the p
 
 VIDEO 3
 I had typed https://monmouth.edu in video 1 in Firefox. But I forgot to show that this is not necessary anymore because Firefox will automatically use https when its memory of the previous monmouth.edu is cleared, and once the fake site is visited once, which is done in the payload. 
+
+VIDEO 4
+Demo of the website's flow. You type credentials, enter, and it goes to a fake error screen. Then loops back to the fake login page.
