@@ -1,5 +1,9 @@
 # CS450-Final-Project
 
+"final" folder has the final results. Other folders contain tests or relevant payloads that were not yet combined into the final payload. 
+
+cyberproj.zip and errorscreen.zip are for the fake website.
+
 using USB Rubber Ducky to DNS spoof
 
 NOTE: Any files renamed from inject.bin to [something] inject.bin need to be renamed back to inject.bin before being used in the USB. Otherwise, it will not work. 
