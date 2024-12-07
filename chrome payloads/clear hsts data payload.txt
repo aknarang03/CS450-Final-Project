@@ -1,0 +1,48 @@
+REM TITLE Chrome hsts
+REM AUTHOR Anjali Narang
+REM DESCRIPTION clear hsts data for my.monmouth.edu on Chrome
+
+DELAY 500
+
+REM run dialog
+GUI r
+DELAY 500
+
+REM wait for Chrome to open
+STRING chrome
+ENTER
+DELAY 500
+
+REM go to hsts settings
+STRING chrome://net-internals/#hsts
+ENTER
+DELAY 1000
+
+REM focus the text box
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+TAB
+
+REM type my.monmouth.edu
+DELAY 500
+STRING my.monmouth.edu
+
+REM press "Delete"
+DELAY 200
+TAB
+DELAY 200
+ENTER
+DELAY 200
+
+REM close Chrome
+ALT F4
