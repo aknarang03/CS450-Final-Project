@@ -9,3 +9,6 @@ I had typed https://monmouth.edu in video 1 in Firefox. But I forgot to show tha
 
 VIDEO 4
 Demo of the website's flow. You type credentials, enter, and it goes to a fake error screen. Then loops back to the fake login page.
+
+VIDEO 5
+Reversing what was done. This could be done after the attack is complete so that perhaps the victim can be prevented from ever finding out what happened.
