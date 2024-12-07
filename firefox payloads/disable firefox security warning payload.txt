@@ -1,0 +1,34 @@
+REM TITLE Firefox disable security warning
+REM AUTHOR Anjali Narang
+REM DESCRIPTION open fake site to disable security warning on Firefox
+
+DELAY 500
+
+REM run dialog
+GUI r
+DELAY 500
+
+REM wait for Firefox to open
+STRING firefox
+ENTER
+DELAY 500
+
+REM go to site
+CTRL t
+DELAY 500
+STRING https://my.monmouth.edu/
+ENTER
+DELAY 1000
+
+REM press "Accept the risk and continue"
+TAB
+TAB
+TAB
+TAB
+TAB
+DELAY 1000
+ENTER
+DELAY 200
+
+REM close Firefox
+ALT F4
