@@ -1,4 +1,5 @@
 # CS450-Final-Project
+# please enter branch "master" for more organized code
 
 "final" folder has the final results. Other folders contain tests or relevant payloads that were not yet combined into the final payload. 
 
