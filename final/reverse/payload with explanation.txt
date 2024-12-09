@@ -83,7 +83,7 @@ STRING exit
 ENTER
 
 REM *** FIX FIREFOX ***
-REM clear the history and caches again.
+REM clear site data and caches again.
 
 DELAY 500
 
