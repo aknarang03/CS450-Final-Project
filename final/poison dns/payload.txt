@@ -69,19 +69,15 @@ TAB
 DELAY 200
 ENTER
 
-REM set to delete all history
+REM clear cookies and site data
 DELAY 200
 DOWN
 DOWN
 DOWN
 DOWN
 DOWN
-
-REM select history
 DELAY 200
 TAB
-
-REM delete
 DELAY 200
 ENTER
 

@@ -43,7 +43,7 @@ REM change type to all files to see the hosts file
 REM delete up to the last comment (with the #)
 
 REM *** CONFIGURE FIREFOX ***
-REM right now history is cleared in place of "forget this site"; could not
+REM right now cookies and site data is cleared in place of "forget this site"; could not
 REM figure out how to do this with ducky. site must be forgotten to clear
 REM hsts data.
 REM cache clearing may not be necessary anymore since this step was added,
@@ -80,18 +80,15 @@ TAB
 DELAY 200
 ENTER
 
-REM set to delete all history
+REM clear cookies and site data
 DELAY 200
 DOWN
 DOWN
 DOWN
 DOWN
 DOWN
-
-REM select history
 DELAY 200
 TAB
-
 REM delete
 DELAY 200
 ENTER
