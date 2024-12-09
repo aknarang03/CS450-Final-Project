@@ -1,6 +1,8 @@
 # CS450-Final-Project
 
-THIS BRANCH INCLUDES A MORE ORGANIZED VERSION OF THE FILES. ENTER BRANCH "main" FOR FULL COMMIT HISTORY.
+Note: Refer to video demos. Sometimes the IP address redirects to something else on csse projects server, so the attack doesn't work flawlessly; it keeps changing around... This would realistically be fixed by hosting it somewhere more stable
+
+THIS BRANCH INCLUDES A MORE ORGANIZED VERSION OF THE FILES. ENTER BRANCH "main" FOR FULL COMMIT HISTORY. (Besides some recent commits)
 
 using USB Rubber Ducky to DNS spoof
 
