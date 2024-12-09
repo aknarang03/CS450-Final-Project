@@ -100,27 +100,21 @@ DELAY 1000
 REM search for setting
 STRING cookies and site data
 
-REM focus the button
+REM delete cookies and site data
 DELAY 200
 TAB
 TAB
 TAB
 DELAY 200
 ENTER
-
-REM set to delete all history
 DELAY 200
 DOWN
 DOWN
 DOWN
 DOWN
 DOWN
-
-REM select history
 DELAY 200
 TAB
-
-REM delete
 DELAY 200
 ENTER
 
